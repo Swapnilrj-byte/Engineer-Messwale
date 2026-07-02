@@ -1,0 +1,31 @@
+/* Engineer Messwale Styles */
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+header{
+    background:#d32f2f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    margin:0;
+}
+
+button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f57c00;
+}
