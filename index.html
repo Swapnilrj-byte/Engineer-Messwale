@@ -44,7 +44,11 @@
     <h3>Veg Thali</h3>
     <p>Fresh chapati, rice, dal, 2 vegetables, papad & salad</p>
     <h4>₹100</h4>
-    <a href="#" class="btn" onclick="addToCart('Veg Thali',100); return false;">Add to Cart</a>
+    <div class="qty-controls">
+    <button onclick="decreaseQty('Veg Thali',100)">−</button>
+    <span id="Veg Thali-qty">0</span>
+    <button onclick="increaseQty('Veg Thali',100)">+</button>
+</div>
 </div>
 
 <div class="card">
@@ -52,7 +56,11 @@
     <h3>Chicken Thali</h3>
     <p>Chicken curry(2 piece) and Chicken Fry(3 piece) with chapati, rice & salad</p>
     <h4>₹150</h4>
-    <a href="#" class="btn" onclick="addToCart('Chicken Thali',150); return false;">Add to Cart</a>
+    <div class="qty-controls">
+    <button onclick="decreaseQty('Chicken Thali',150)">−</button>
+    <span id="Chicken Thali-qty">0</span>
+    <button onclick="increaseQty('Chicken Thali',150)">+</button>
+</div>
 </div>
 
 <div class="card">
@@ -60,7 +68,11 @@
     <p>Egg curry and Egg Fry with chapati, rice & salad</p>
     <h4>₹120</h4>
 
-    <a href="#" class="btn" onclick="addToCart('Egg Thali',140); return false;">Add to Cart</a>
+    <div class="qty-controls">
+    <button onclick="decreaseQty('Egg Thali',120)">−</button>
+    <span id="Egg Thali-qty">0</span>
+    <button onclick="increaseQty('Egg Thali',120)">+</button>
+</div>
 </div>
 
 </section>
