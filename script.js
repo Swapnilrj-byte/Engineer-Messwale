@@ -1,5 +1,10 @@
-// Engineer Messwale Website
+let cart = [];
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Engineer Messwale website loaded!");
-});
+function addToCart(item, price) {
+    cart.push({
+        item: item,
+        price: price
+    });
+
+    alert(item + " added to cart!");
+}
