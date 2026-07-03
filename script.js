@@ -53,4 +53,20 @@ function updateCart() {
         document.getElementById("Chicken Thali-qty").innerText = 0;
         document.getElementById("Egg Thali-qty").innerText = 0;
     }
+}function checkout() {
+
+    if (Object.keys(cart).length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    let message = "🛒 Engineer Messwale Order\n\n";
+
+    for (let item in cart) {
+        message += item + " x " + cart[item].qty + "\n";
+    }
+
+    message += "\nTotal: ₹" + document.getElementById("total").innerText;
+
+    alert(message);
 }
