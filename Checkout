@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Engineer Messwale</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Engineer Messwale</h1>
+</header>
+
+<section class="menu">
+
+<h2>Checkout</h2>
+
+<input type="text" placeholder="Full Name"><br><br>
+
+<input type="tel" placeholder="Mobile Number"><br><br>
+
+<textarea placeholder="Delivery Address"></textarea><br><br>
+
+<select>
+<option>Cash on Delivery</option>
+<option>UPI Payment</option>
+</select>
+
+<br><br>
+
+<button class="btn">
+Place Order
+</button>
+
+</section>
+
+</body>
+</html>
