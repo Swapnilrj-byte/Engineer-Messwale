@@ -1,14 +1,27 @@
-let cart = [];
+let cart = {};
 
-function addToCart(item, price) {
-    cart.push({
-        item: item,
-        price: price
-    });
+function increaseQty(item, price) {
+
+    if (!cart[item]) {
+        cart[item] = { qty: 0, price: price };
+    }
+
+    cart[item].qty++;
 
     updateCart();
+}
 
-    alert(item + " added to cart!");
+function decreaseQty(item) {
+
+    if (cart[item] && cart[item].qty > 0) {
+        cart[item].qty--;
+
+        if (cart[item].qty === 0) {
+            delete cart[item];
+        }
+
+        updateCart();
+    }
 }
 
 function updateCart() {
@@ -20,18 +33,24 @@ function updateCart() {
 
     let sum = 0;
 
-    cart.forEach(function(food) {
+    for (let item in cart) {
+
+        document.getElementById(item + "-qty").innerText = cart[item].qty;
 
         cartItems.innerHTML +=
-        "<p>" + food.item + " - ₹" + food.price + "</p>";
+            "<p>" + item + " × " + cart[item].qty +
+            " = ₹" + (cart[item].qty * cart[item].price) + "</p>";
 
-        sum += food.price;
-
-    });
+        sum += cart[item].qty * cart[item].price;
+    }
 
     total.innerText = sum;
 
-    if (cart.length === 0) {
+    if (sum === 0) {
         cartItems.innerHTML = "<p>Your cart is empty.</p>";
+
+        document.getElementById("Veg Thali-qty").innerText = 0;
+        document.getElementById("Chicken Thali-qty").innerText = 0;
+        document.getElementById("Egg Thali-qty").innerText = 0;
     }
 }
